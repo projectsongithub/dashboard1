@@ -10,8 +10,8 @@ $( document ).ready(function() {
     $(".card_close").on("click", function(){
         $(this).parent().css("display","none");
         $(".background_color").css("display","none");
-
     });
+
     $(".left_item p").on("click", function(){
         if( $(this).hasClass("change_input")){
             $(this).removeClass("change_input");
@@ -29,16 +29,15 @@ $( document ).ready(function() {
 
     });
     $(".back_btn").on("click", function(){
-        location.replace("dashboard.html");
-    });
+        location.replace("tasks.html");
+});
 
 
     $('.links').on("click", function () {
+
         $('.links').removeClass("active_item");
         $(this).addClass("active_item");
-        $('.user_information').css("display", "none");
-         var a = "#" + $(this).attr("data-id");
-        $(a).css("display","flex");
+
         });
     $(".settings_user").on("click", function () {
         $(".profile").slideToggle();
