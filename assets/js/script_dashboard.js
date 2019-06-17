@@ -13,7 +13,6 @@ $( document ).ready(function() {
 
     });
     $(".left_item p").on("click", function(){
-
         if( $(this).hasClass("change_input")){
             $(this).removeClass("change_input");
             $(this).parent().find("input").prop('disabled', true);
@@ -41,6 +40,14 @@ $( document ).ready(function() {
          var a = "#" + $(this).attr("data-id");
         $(a).css("display","flex");
         });
+    $(".settings_user").on("click", function () {
+        $(".profile").slideToggle();
+        $(".profile").css("display","flex");
+        $(".search").css("display","none");
+
+
+
+    });
 
 
    // $('#dtBasicExample').DataTable();
@@ -61,27 +68,27 @@ $(".navbar_btn p").on("click", function () {
 });
  $(".search_small").on("click", function () {
         $(".search").slideToggle();
+     $(".profile").css("display","none");
  });
 
  $(".menu_burger").on("click", function (event) {
      event.stopPropagation();
         $(".aside").css("display", "block");
-
     });
-
  $(document).on("click", function(e){
-     $(".aside").css("display", "none");
-
+     if ($(window).width() <= 768) {
+         $(".aside").css("display", "none");
+     }
  })
 
     $(".aside").mouseover(function(){
 
-        $(".aside").addClass("open_menu")
+        $(".aside").addClass("open_menu");
 
     });
     $(".aside").mouseout(function(){
 
-        $(".aside").removeClass("open_menu")
+        $(".aside").removeClass("open_menu");
 
     });
 
